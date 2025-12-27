@@ -37,24 +37,22 @@ const menuToggle = document.getElementById("menu-toggle");
 const navBar = document.getElementById("nav-right");
 const navLinks = document.querySelectorAll(".inlist");
 
-// open / close menu
 menuToggle.addEventListener("click", () => {
-  navBar.classList.toggle("tg");
+    navBar.classList.toggle("tg");
 });
 
-// close menu on link click
 navLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    navBar.classList.remove("tg");
-  });
+    link.addEventListener("click", () => {
+        navBar.classList.remove("tg");
+    });
 });
 
-// fix resize issue (VERY IMPORTANT)
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 769) {
-    navBar.classList.remove("tg");
-  }
+    if (window.innerWidth > 768) {
+        navBar.classList.remove("tg");
+    }
 });
+
 
 
 

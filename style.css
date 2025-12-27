@@ -89,7 +89,6 @@ main {
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 50px;
     align-items: center;
     flex-wrap: wrap;
     overflow-x: hidden;
@@ -104,7 +103,7 @@ main {
     /* unchanged */
     width: 320px;
     height: 380px;
-    padding: 40px;
+    padding: 30px;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -123,10 +122,14 @@ main {
 
 #ani-descrip {
     width: 100%;
+    display: flex;
     font-family: sans-serif;
     align-items: center;
-    /* align-content: center; */
+    justify-content: center;
     margin-top: 20px;
+    font-size: 13px;
+    /* margin-right: ; */
+
 }
 
 .card2 {
@@ -455,41 +458,47 @@ main {
     .logo {
         margin-left: 15px;
     }
+    .nav-right{
+        display: none;
+    }
+    /* .card1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    } */
 
-    /* 🔥 MOBILE NAV (SMOOTH ANIMATION) */
-    .nav-right {
+    #ani-descrip{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+    }
+
+    .nav-right.tg {
         position: absolute;
         top: 78px;
         left: 0;
         width: 100%;
-
+        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 25px;
         padding: 20px 0;
-
-        display: flex;
-        /* important */
-        max-height: 0;
-        /* hidden */
-        opacity: 0;
         overflow: hidden;
 
         transform: translateY(-10px);
         transition: all 0.3s ease;
-        pointer-events: none;
-        /* prevents click when closed */
+        padding-right: 20px;
+
     }
 
-    .nav-right.active {
-        max-height: 300px;
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
-    }
+    .inlist.tg:hover {
+        text-decoration: underline;
 
-    .card1 {
-        width: 99%;
+        /* color: cornsilk; */
+
     }
 }
 
@@ -515,11 +524,6 @@ main {
         display: none;
     }
 
-    .card1 {
-        width: 99%;
-        padding: 30px;
-        height: 360px;
-    }
 
     #ani {
         width: 200px;
@@ -550,6 +554,9 @@ main {
         max-height: 260px;
         opacity: 1;
         transform: translateY(0);
+    }
+    .card1{
+        height: 330px;
     }
 
 }
@@ -595,25 +602,16 @@ main {
         transform: translateY(-10px);
         transition: all 0.3s ease;
         padding-right: 20px;
-        
+
     }
-.inlist.tg:hover {
-    text-decoration: underline;
-   
-    /* color: cornsilk; */
 
-}
-    /* or above one both are same  */
+    .inlist.tg:hover {
+        text-decoration: underline;
 
-    /* .nav-right.active {
-        position: absolute;
-        top: 80px;
-        gap: 20px;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        transform: translateY(0);
-    } */
+        /* color: cornsilk; */
+
+    }
+
 
 
 }
